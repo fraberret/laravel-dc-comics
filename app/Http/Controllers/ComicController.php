@@ -12,8 +12,8 @@ class ComicController extends Controller
      */
     public function index()
     {
-        dd(Comic::all());
-        return view('comics.index');
+
+        return view('comics.index', ['comics' => Comic::orderByDesc('id')]);
     }
 
     /**
