@@ -12,6 +12,7 @@
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Title</th>
+                        <th scope="col">Decscription</th>
                         <th scope="col">Thumb</th>
                         <th scope="col">Price</th>
                         <th scope="col">Series</th>
@@ -21,7 +22,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse ($comics as $comic)
+                    @foreach ($comics as $comic)
                         <tr class="">
                             <td scope="row">{{ $comic->id }}</td>
                             <td>{{ $comic->title }}</td>
@@ -37,10 +38,12 @@
                             </td>
 
                         </tr>
-                    @empty
-                        <tr class="">
-                            <td scope="row" colspan="8">Nothing to show</td>
-                    @endforelse
+                    @endforeach
+
+
+                    {{--  <tr class="">
+                            <td scope="row" colspan="8">Nothing to show</td> --}}
+
 
 
 
