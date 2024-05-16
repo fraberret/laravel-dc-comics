@@ -34,7 +34,9 @@
                             <td>{{ $comic->type }}</td>
                             <td>
                                 <a href="{{ route('comics.show', $comic) }}">View</a>
-                                /Edit/Delete
+                                <a href="{{ route('comics.edit', $comic) }}">Edit</a>
+
+                                /Delete
                             </td>
 
                         </tr>
