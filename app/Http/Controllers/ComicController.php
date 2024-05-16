@@ -31,7 +31,7 @@ class ComicController extends Controller
     {
         $data = $request->all();
         /* dd($request->all()); */
-        $comic = new Comic();
+        /*  $comic = new Comic();
         $comic->title = $data['title'];
         $comic->description = $data['description'];
         $comic->thumb = $data['thumb'];
@@ -39,7 +39,8 @@ class ComicController extends Controller
         $comic->series = $data['series'];
         $comic->sale_date = $data['sale_date'];
         $comic->type = $request['type'];
-        $comic->save();
+        $comic->save(); */
+        Comic::create($data);
 
         return to_route('comics.index');
     }
