@@ -20,6 +20,6 @@ Route::get('/', function () {
 
 
     return view('welcome', ['comics' => Comic::all()]);
-});
+})->name('home');
 
 Route::resource('/comics', ComicController::class);
