@@ -47,7 +47,7 @@
             <div class="mb-3">
                 <label for="type" class="form-label">Type</label>
                 <input type="text" class="form-control" name="type" id="type" aria-describedby="typeHelper"
-                    placeholder="" />
+                    placeholder="" value="{{ $comic->type }}" />
                 <small id="typeHelper" class="form-text text-muted">Type a comic type</small>
             </div>
 
