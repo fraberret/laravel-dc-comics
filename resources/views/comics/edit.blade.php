@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1>Add a new comic</h1>
+        <h1>Edit selected comic</h1>
         <form action="{{ route('comics.update', $comic) }}" method="post">
             @csrf
             @method('PUT')
