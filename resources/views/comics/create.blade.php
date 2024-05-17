@@ -1,8 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container my-4">
         <h1>Add a new comic</h1>
+
+        @include('partials.validation-errors')
         <form action="{{ route('comics.store') }}" method="post">
             @csrf
 
