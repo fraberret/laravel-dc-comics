@@ -37,7 +37,7 @@ class ComicController extends Controller
             'thumb' => 'required|max:255',
             'price' => 'required|max:10',
             'series' => 'nullable|max:50',
-            'sale_date' => 'nullable|max:50',
+            'sale_date' => 'nullable|max:50|date',
             'type' => 'nullable'
 
         ]);
