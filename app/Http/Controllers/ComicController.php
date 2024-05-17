@@ -41,7 +41,7 @@ class ComicController extends Controller
             'type' => 'nullable'
 
         ]);
-        dd($val_data);
+        /* dd($val_data); */
         /*  $comic = new Comic();
         $comic->title = $data['title'];
         $comic->description = $data['description'];
@@ -77,7 +77,17 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        $comic->update($request->all());
+        $val_data = $request->validate([
+            'title' => 'required|min:3|max:255',
+            'description' => 'required',
+            'thumb' => 'required|max:255',
+            'price' => 'required|max:10',
+            'series' => 'nullable|max:50',
+            'sale_date' => 'nullable|max:50|date',
+            'type' => 'nullable'
+
+        ]);
+        $comic->update($val_data);
         return to_route('comics.index');
     }
 

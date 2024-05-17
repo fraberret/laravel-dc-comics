@@ -12,8 +12,8 @@
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Title</th>
-                        <th scope="col">Decscription</th>
                         <th scope="col">Thumb</th>
+                        <th scope="col">Description</th>
                         <th scope="col">Price</th>
                         <th scope="col">Series</th>
                         <th scope="col">Sale Date</th>
@@ -23,11 +23,11 @@
                 </thead>
                 <tbody>
                     @foreach ($comics as $comic)
-                        <tr class="">
+                        <tr>
                             <td scope="row">{{ $comic->id }}</td>
                             <td>{{ $comic->title }}</td>
+                            <td><img width="200" src="{{ $comic->thumb }}" alt=""></td>
                             <td>{{ $comic->description }}</td>
-                            <td><img width="60" src="{{ $comic->thumb }}" alt=""></td>
                             <td>{{ $comic->price }}</td>
                             <td>{{ $comic->series }}</td>
                             <td>{{ $comic->sale_date }}</td>
