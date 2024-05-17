@@ -9,6 +9,8 @@
             <div class="col">
                 <h2>{{ $comic->title }}</h2>
                 <p>{{ $comic->description }}</p>
+                <a class="btn btn-primary" href="{{ route('comics.index') }}"><i class="fa fa-arrow-circle-left"
+                        aria-hidden="true"></i> Previous</a>
                 <a class="btn btn-primary" href="{{ route('comics.edit', $comic) }}">Modify</a>
                 <button type="button" class="btn btn-danger btn-m" data-bs-toggle="modal"
                     data-bs-target="#modalId-{{ $comic->id }}">
