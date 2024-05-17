@@ -23,7 +23,7 @@
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
                 <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="description"
-                    rows="3" value="{{ old('description') }}">Description</textarea>
+                    rows="3" placeholder="Description" value="{{ old('description') }}"></textarea>
                 @error('description')
                     <div class="text-danger">{{ $message }}</div>
                 @enderror
@@ -77,6 +77,8 @@
                 @enderror
             </div>
 
+            <a class="btn btn-primary" href="{{ route('comics.index') }}"><i class="fa fa-arrow-circle-left"
+                    aria-hidden="true"></i> Previous</a>
             <button type="submit" class="btn btn-primary">
                 Create
             </button>
